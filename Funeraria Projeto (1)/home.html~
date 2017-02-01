@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Eterna Morada</title>
+<link rel ="stylesheet" type="text/css" href="estilo.css">
+
+</head>
+
+<body >
+
+<nav id="menu">
+  <ul>
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="nossaHistoria.html">Quem Somos</a></li>
+    <li><a href="cadastroo.php">Cadastro</a></li>
+    <li><a href="Contato.html">Contato</a></li>
+    <li><a href="">Login</a></li>
+  </ul>
+
+</nav>
+ 
+ <center>
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+ <img src="images.jpg" style="width:600px;height:300px;">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="rose.jpg" style="width:600px;height:300px;">
+
+</div>
+
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="tunel.jpg" style="width:600px;height:300px;">
+
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="verde.jpg" style="width:600px;height:300px;">
+
+</div>
+</center>
+<br>
+
+
+
+<div align="left">©2017 - Desenvolvido pela turma de IPI do IFPE Campus Jaboatão</div>
+
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+<br><br>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+
+</script>
+
+
+</body>
+</html>
